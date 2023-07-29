@@ -1,6 +1,6 @@
 double array_mean(int array[], int n)
 {
-    int total = 0;
+    double total = 0.0;
     if (n < 1)
     {
         return 0.0;
