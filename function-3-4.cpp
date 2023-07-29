@@ -3,19 +3,19 @@ void print_pass_fail(char grade){
 switch (grade)
 {
 case 'A':
-    std::cout << "pass" << std::endl;
+    std::cout << "Pass" << std::endl;
     break;
 case 'B':
-    std::cout << "pass" << std::endl;
+    std::cout << "Pass" << std::endl;
     break;
     case 'C':
-    std::cout << "pass" << std::endl;
+    std::cout << "Pass" << std::endl;
     break;
     case 'D':
-    std::cout << "fail" << std::endl;
+    std::cout << "Fail" << std::endl;
     break;
     case 'E':
-    std::cout << "fail" << std::endl;
+    std::cout << "Fail" << std::endl;
     break;
 default:
     break;
