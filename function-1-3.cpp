@@ -56,5 +56,5 @@ void count_digits(int array[4][4])
         }
 
     }
-cout << "0:" << number_0  << ";1:" << number_1 << ";2:" << number_2  <<";3:" << number_3  <<";4:" << number_4  <<";5:" << number_5  <<";0:" << number_6  <<";7:" << number_7  <<";8:" << number_8  << ";9:" << number_9 <<";" <<endl;
+cout << "0:" << number_0  << ";1:" << number_1 << ";2:" << number_2  <<";3:" << number_3  <<";4:" << number_4  <<";5:" << number_5  <<";6:" << number_6  <<";7:" << number_7  <<";8:" << number_8  << ";9:" << number_9 <<";" <<endl;
 }
