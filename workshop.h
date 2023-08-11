@@ -11,25 +11,24 @@ void printArray(double* db, int x){
     }
     
 }
-double arrayMax(double* db[], int x){
-    double max = *db[0];
+double arrayMax(double* db, int x){
+    double max = db[0];
     for (int i = 0; i < x; i++)
     {
         
-        if (max > *db[i] ){
-           max = *db[i]; 
+        if (max > db[i] ){
+           max = db[i]; 
         }
     }
     return max;
 }
 double* dinamicArray(int n, double m){
-    double* array{ new double[n]{} };
+    double* array= new double[n] ;
     for (int i = 0; i < n; i++)
     {
         array[i] = m;
         
     }
     
-    double* pointer = array;
-    return pointer;
+    return array;
 }
