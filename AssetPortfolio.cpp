@@ -6,10 +6,10 @@
 
 AssetPortfolio::AssetPortfolio(){
     asset = 0;
-    currentAsset = 0;
+    
 };           // default constructor capacity of zero assets
 AssetPortfolio::AssetPortfolio(int size){
-    asset= size;
+    asset = size;
     listOfAsset = new Asset[asset];
 };   // constructor for a portfolio of given size
 
@@ -22,7 +22,7 @@ int AssetPortfolio::get_num_assets(){
 // otherwise returns false
 bool AssetPortfolio::has_asset(std::string product){
     bool check = false;
-    for ( int i = 0 ;i < asset ; ++i) {
+    for ( int i = 0 ;i < asset ; i++) {
     if (product == listOfAsset[i].get_product_type())
     {
         check = true;

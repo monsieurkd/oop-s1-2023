@@ -6,7 +6,7 @@
 class AssetPortfolio{
 private:
 int asset;
-int currentAsset;
+int currentAsset =0;
 Asset* listOfAsset;
 
 public:
