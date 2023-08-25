@@ -1,5 +1,4 @@
 #include <string> 
-#include "Asset.h"
 #include "AssetPortfolio.h"
 
 
@@ -15,7 +14,7 @@ AssetPortfolio::AssetPortfolio(int size){
 
 // returns the number of assets which are in the portfolio
 int AssetPortfolio::get_num_assets(){
-    return asset;
+    return currentAsset;
 }; 
 
 // returns true if any asset in the portfolio is of the specified product type
@@ -23,12 +22,13 @@ int AssetPortfolio::get_num_assets(){
 bool AssetPortfolio::has_asset(std::string product){
     bool check = false;
     for ( int i = 0 ;i < asset ; i++) {
-    if (product == listOfAsset[i].get_product_type())
+    if (listOfAsset[i].get_product_type() == product)
     {
         check = true;
     }
-    return check;
     }
+    return check;
+
 }; 
 
 Asset* AssetPortfolio::get_assets(){
