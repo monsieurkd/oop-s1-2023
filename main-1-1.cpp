@@ -1,9 +1,14 @@
+#include <string> 
+#include "Asset.h"
+#include "AssetPortfolio.h"
 #include <iostream>
-#include "Musician.h"
-int main() {
-Musician m1;
-std::cout << "Default instrument: " << m1.get_instrument() << ", Default experience: " << m1.get_experience() << std::endl;
-Musician m2("guitar", 5);
-std::cout << "Instrument: " << m2.get_instrument() << ", Experience: " << m2.get_experience() << std::endl;
-return 0;
+
+int main(){
+    Asset A;
+    Asset B(3, "house");
+    std::cout << A.get_product_type() << " " << A.get_value() << " "  << std::endl;
+    std::cout << B.get_product_type() << " " << B.get_value() << " " << std::endl;
+    A.~Asset();
+    B.~Asset();
+
 }
