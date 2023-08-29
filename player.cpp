@@ -1,9 +1,10 @@
-#include "Player.h"
 #include <iostream>
 #include <string>
+#include "player.h"
 
 using namespace std;
-Player::Player(string name, int health, int damage) : _name(name), _health(health), _damage(damage){};
+
+Player::Player(string name, int health, int damage) : _name(name), _health(health), _damage(damage) {}
 // Player() : _name("No name"), _health(0), _damage(0){};
 int Player::getHealth()
 {

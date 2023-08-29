@@ -2,16 +2,16 @@
 #define WIZARD_H
 #include "player.h"
 
-class Wizard : protected Player
+class Wizard : public Player
 {
 protected:
     int _mana;
 
 public:
-    Wizard(string name, int health, int damage, int mana) ;
+    Wizard(string name, int health, int damage, int mana);
 
-    void Wizard::castSpell(Player *opponent);
- 
+
+    void castSpell(Player *opponent);
 };
 
 #endif
