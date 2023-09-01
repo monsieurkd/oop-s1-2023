@@ -45,7 +45,7 @@ ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), currentCount(0) {
 
     int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
         int count = 0;
-        time_t currentTime = std::time(nullptr);
+        time_t currentTime = time(nullptr);
         for (int i = 0; i < currentCount; ++i) {
             int duration = vehicles[i]->getParkingDuration();
             if (duration > maxParkingDuration) {
