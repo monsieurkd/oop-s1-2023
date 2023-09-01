@@ -6,13 +6,14 @@ using namespace std;
 
 class Vehicle{
     protected:
+    int _ID;
 time_t  _timeOfEntry;
-int _ID;
+
 public:
 Vehicle(); //default constructor
 Vehicle(int ID);
 int getID();
-int getParkingDuration();
+int getParkingDuration() ;
 };
 
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ParkingLot.h"
-
-
+#include <time.h>
+#include <stdint.h>
 ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), currentCount(0) {
         vehicles = new Vehicle*[maxCapacity];
     }

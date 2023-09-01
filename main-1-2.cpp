@@ -20,7 +20,7 @@ int main() {
         int vehicleType;
         std::cout << "Enter vehicle type (1 for Car, 2 for Bus, 3 for Motorbike): ";
         std::cin >> vehicleType;
-        int count = parkingLot.getCount()+1;
+        
         switch (vehicleType) {
             case 1:
                 parkingLot.parkVehicle(new Car(parkingLot.getCount() + 1));

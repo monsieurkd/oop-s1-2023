@@ -1,6 +1,8 @@
 #ifndef PARKINGLOT_H
 #define PARKINGLOT_H
 #include "Vehicle.h"
+#include <time.h>
+#include <stdint.h>
 #include <iostream>
 
 class ParkingLot {
