@@ -22,7 +22,7 @@ ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), currentCount(0) {
         if (currentCount < maxCapacity) {
             vehicles[currentCount] = vehicle;
             currentCount++;
-            std::cout << "Vehicle with ID " << vehicle->getID() << " parked successfully." << std::endl;
+            
         } else {
             std::cout << "The lot is full." << std::endl;
         }
@@ -36,7 +36,7 @@ ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), currentCount(0) {
                     vehicles[j] = vehicles[j + 1];
                 }
                 currentCount--;
-                std::cout << "Vehicle with ID " << vehicleID << " unparked successfully." << std::endl;
+               
                 return;
             }
         }
