@@ -2,6 +2,7 @@
 #include "ParkingLot.h"
 #include <time.h>
 #include <stdint.h>
+using namespace std;
 ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), currentCount(0) {
         vehicles = new Vehicle*[maxCapacity];
     }
@@ -44,7 +45,7 @@ ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), currentCount(0) {
 
     int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
         int count = 0;
-        std::time_t currentTime = std::time(nullptr);
+        time_t currentTime = std::time(nullptr);
         for (int i = 0; i < currentCount; ++i) {
             int duration = vehicles[i]->getParkingDuration();
             if (duration > maxParkingDuration) {

@@ -4,7 +4,7 @@
 #include <time.h>
 #include <stdint.h>
 #include <iostream>
-
+using namespace std;
 class ParkingLot {
 private:
     int maxCapacity;
