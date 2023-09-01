@@ -1,8 +1,8 @@
 
 #include <time.h>
 #include <stdint.h>
-#include "bus.h"
-#include "vehicle.h"
+#include "Bus.h"
+#include "Vehicle.h"
 using namespace std;
 Bus::Bus(int id) : Vehicle(id) {};
 int Bus::getParkingDuration(){
