@@ -27,7 +27,7 @@ if(this->get_weight() -5670 >0 ){
 float fuelUse = fuel*minutes;
 float fuelLeft = this->get_fuel() - fuelUse;
 if(fuelLeft > 20){
-this->set_numberOfFlights(1);
+this->numberOfFlights ++;
 this->set_fuel(fuelLeft);
 }
 
