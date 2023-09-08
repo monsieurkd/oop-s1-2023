@@ -21,13 +21,13 @@ if(headwind >=40 ){
     fuel = 0.18;
 }
 if(this->get_weight() -5670 >0 ){
-    fuel += 0.1*(this->get_weight()-5670);
+    fuel += 0.01*(this->get_weight()-5670);
 }
 
 float fuelUse = fuel*minutes;
 float fuelLeft = this->get_fuel() - fuelUse;
 if(fuelLeft > 20){
-this->set_numbetOfFlights(1);
+this->set_numberOfFlights(1);
 this->set_fuel(fuelLeft);
 }
 

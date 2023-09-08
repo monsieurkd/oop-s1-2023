@@ -36,7 +36,7 @@ fuel += 0.001*this->get_numPassengers();
 float fuelUse = fuel*minutes;
 float fuelLeft = this->get_fuel() - fuelUse;
 if(fuelLeft > 20){
-this->set_numbetOfFlights(1);
+this->set_numberOfFlights(1);
 this->set_fuel(fuelLeft);
 }
 

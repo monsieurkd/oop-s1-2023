@@ -8,12 +8,16 @@ using namespace std;
 AirFleet::AirFleet()
 {
     fleet = new AirVehicle *[5];
-    fleet[0] = &Airplane(20, 10);
-    fleet[1] = &Helicopter(10000, "BlackHawk");
-    fleet[2] = &AirVehicle(5000);
-
-    fleet[3] = &Helicopter(100, "WhiteHawk");
-    fleet[4] = &Airplane(15, 20);
+    Airplane a = Airplane(20,10);
+    fleet[0] = &a;
+    Helicopter b = Helicopter(10000, "BlackHawk");
+    fleet[1] =  &b;
+    AirVehicle c = AirVehicle(5000); 
+    fleet[2] = &c ;
+Helicopter d =  Helicopter(100, "WhiteHawk");
+    fleet[3] = &d;
+    Airplane e = Airplane(15, 20);
+    fleet[4] = &e ;
 };
 
 AirVehicle **AirFleet::get_fleet(){

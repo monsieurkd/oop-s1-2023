@@ -26,7 +26,7 @@ this->weight = w;
 void AirVehicle::set_fuel(float f){
     this->fuel = f;
 };
-void AirVehicle::set_numbetOfFlights(int n){
+void AirVehicle::set_numberOfFlights(int n){
     this->numberOfFlights = n;
 };
 int AirVehicle::get_weight(){

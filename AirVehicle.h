@@ -15,7 +15,7 @@ public:
     virtual void fly(int headwind, int minutes);
     void set_weight(int w);
     void set_fuel(float f);
-    void set_numbetOfFlights(int n);
+    void set_numberOfFlights(int n);
     int get_weight();
     float get_fuel();
     int get_numberOfFlights();
