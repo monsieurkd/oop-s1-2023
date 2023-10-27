@@ -21,7 +21,7 @@
 #include "Spot.h"
 #include "Snare.h"
 #include "Persona.h"
-#include "Assist.h"
+#include "Assists.h"
 #include <vector>
 
 class Play
@@ -77,7 +77,7 @@ public:
                     {
                         if (spot2->getCategory() == 'S' && dynamic_cast<Snare*>(spot2)->isOperative())
                         {
-                            Assist assist; // Create an instance of the Assist class
+                            Assists assist; // Create an instance of the Assist class
                             double distance = assist.evaluateDistance(spot1->getLoc(), spot2->getLoc());
                             if (distance <= snareTriggerDistance)
                             {

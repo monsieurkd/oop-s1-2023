@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Assist.h"
+#include "Assists.h"
 #include <tuple>
 int main() {
     // Generate random positions
-    Assist a,b;
+    Assists a,b;
     std::tuple<int, int> loc1 = a.createRandomLoc(10, 10);
     std::tuple<int, int> loc2 = b.createRandomLoc(10, 10);
 

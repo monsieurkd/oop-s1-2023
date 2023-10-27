@@ -8,9 +8,9 @@
 #include <ctime>
 #include <cmath>
 // Additionally, create a main-1.cpp file to test the functionality of the classes defined above.
-#ifndef ASSIST_H
-#define ASSIST_H
-class Assist{
+#ifndef ASSISTS_H
+#define ASSISTS_H
+class Assists{
     public:
 std::tuple<int, int> createRandomLoc(int matrixWidth, int matrixHeight){
     static bool seed = false;
