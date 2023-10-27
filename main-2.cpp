@@ -1,25 +1,23 @@
 #include <iostream>
-#include "Ship.h"
-#include "Mine.h"
-#include "Explosion.h"
+#include "Snare.h"
+#include "Persona.h"
+#include "Spot.h"
 
 int main() {
-    // Create a Ship and a Mine
-    Ship myShip(3, 3);
-    Mine myMine(5, 5);
+ 
+    Snare snare(2, 3);
+    Persona persona(4, 5);
 
-    // Move the Ship
-    myShip.move(2, 2);
+    std::cout << "Initial Snare Category: " << snare.getCategory() << ", Operative: " << snare.isOperative() << std::endl;
+    std::cout << "Initial Persona Category: " << persona.getCategory() << std::endl;
 
-    // Explode the Mine
-    Explosion explosion = myMine.explode();
+    snare.implement(persona);
 
-    // Apply the Explosion to the Ship
-    explosion.apply(myShip);
+    std::cout << "Snare Category after implementation: " << snare.getCategory() << ", Operative: " << snare.isOperative() << std::endl;
+    std::cout << "Persona Category after implementation: " << persona.getCategory() << std::endl;
 
-    // Print Ship and Mine details
-    std::cout << "Ship Position: (" << std::get<0>(myShip.getPos()) << ", " << std::get<1>(myShip.getPos()) << ") Type: " << myShip.getType() << std::endl;
-    std::cout << "Mine Position: (" << std::get<0>(myMine.getPos()) << ", " << std::get<1>(myMine.getPos()) << ") Type: " << myMine.getType() << std::endl;
+    persona.shift(1, -1);
+    std::cout << "Persona Location after shifting: " << std::get<0>(persona.getLoc()) << ", " << std::get<1>(persona.getLoc()) << std::endl;
 
     return 0;
 }

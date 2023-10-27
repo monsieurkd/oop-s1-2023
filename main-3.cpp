@@ -1,27 +1,16 @@
-#include "Game.h"
 #include <iostream>
-
+#include "Play.h"
+#include "Spot.h"
+#include "Persona.h"
+#include "Snare.h"
 int main() {
-    Game game;
-    std::vector<GameEntity*> entities = game.initGame(3, 2, 10, 10);
+    Play game;
+    game.initPlay(2, 3, 10, 5);
+    game.playCycle(20, 2.0);
 
-    // Display the initial entities
-    std::cout << "Initial entities:" << std::endl;
-    for (GameEntity* entity : entities) {
-        std::cout << "Position: (" << std::get<0>(entity->getPos()) << ", " << std::get<1>(entity->getPos()) << ") Type: " << entity->getType() << std::endl;
-    }
 
-    game.gameLoop(5, 2.5);
-
-    // Display the updated entities after the game loop
-    std::cout << "\nUpdated entities:" << std::endl;
-    for (GameEntity* entity : game.get_entities()) {
-        std::cout << "Position: (" << std::get<0>(entity->getPos()) << ", " << std::get<1>(entity->getPos()) << ") Type: " << entity->getType() << std::endl;
-    }
-
-    // Clean up the dynamically allocated entities
-    for (GameEntity* entity : entities) {
-        delete entity;
+    for (Spot* spot : game.getMatrix()) {
+        delete spot;
     }
 
     return 0;

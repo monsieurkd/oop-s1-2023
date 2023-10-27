@@ -1,18 +1,18 @@
 #include <iostream>
-#include "Utils.h"
-
+#include "Assist.h"
+#include <tuple>
 int main() {
     // Generate random positions
-    Utils a,b;
-    std::tuple<int, int> pos1 = a.generateRandomPos(10, 10);
-    std::tuple<int, int> pos2 = b.generateRandomPos(10, 10);
+    Assist a,b;
+    std::tuple<int, int> loc1 = a.createRandomLoc(10, 10);
+    std::tuple<int, int> loc2 = b.createRandomLoc(10, 10);
 
     // Calculate distance between positions
-    double distance = a.calculateDistance(pos1, pos2);
+    double distance = a.evaluateDistance(loc1, loc2);
 
     // Print the generated positions and distance
-    std::cout << "Position 1: (" << std::get<0>(pos1) << ", " << std::get<1>(pos1) << ")\n";
-    std::cout << "Position 2: (" << std::get<0>(pos2) << ", " << std::get<1>(pos2) << ")\n";
+    std::cout << "Position 1: (" << std::get<0>(loc1) << ", " << std::get<1>(loc1) << ")\n";
+    std::cout << "Position 2: (" << std::get<0>(loc2) << ", " << std::get<1>(loc2) << ")\n";
     std::cout << "Distance: " << distance << std::endl;
 
     return 0;
